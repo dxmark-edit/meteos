@@ -1,0 +1,112 @@
+/* General App styles */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* App name */
+.app-name {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.city-search {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.city-search:focus {
+  border-color: #007bff;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Loader styling */
+.Oval {
+  margin: 20px auto;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff0000;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+/* Weather display styling */
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Favorites section styling */
+.favorites {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.favorites h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.favorites ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorites li {
+  padding: 8px;
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.favorites li:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
