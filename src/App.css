@@ -1,14 +1,36 @@
+/* Root theme variables for consistent colors */
+:root {
+  --day-bg: #e3f2fd;
+  --day-text: #333;
+  --night-bg: #2c3e50;
+  --night-text: #ecf0f1;
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --error-color: #ff6b6b;
+}
+
 /* General App styles */
 .App {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   text-align: center;
   padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App.day {
+  background-color: var(--day-bg);
+  color: var(--day-text);
+}
+
+.App.night {
+  background-color: var(--night-bg);
+  color: var(--night-text);
 }
 
 /* App name */
 .app-name {
-  font-size: 2rem;
-  color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -17,6 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
@@ -26,28 +49,27 @@
   font-size: 1rem;
   border: 2px solid #ddd;
   border-radius: 5px;
-  outline: none;
   transition: border-color 0.3s ease;
 }
 
 .city-search:focus {
-  border-color: #007bff;
+  border-color: var(--primary-color);
+  outline: none;
 }
 
 button {
-  margin-left: 10px;
   padding: 10px 15px;
   font-size: 1rem;
   border: none;
-  background-color: #007bff;
-  color: #fff;
   border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-hover);
 }
 
 /* Loader styling */
@@ -57,56 +79,73 @@ button:hover {
 
 /* Error message styling */
 .error-message {
-  color: #ff0000;
+  color: var(--error-color);
   font-size: 1.2rem;
   margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 /* Weather display styling */
 h2 {
   font-size: 1.8rem;
-  color: #333;
   margin-top: 10px;
 }
 
 p {
   font-size: 1rem;
-  color: #666;
 }
 
 img {
   width: 100px;
   height: 100px;
+  margin: 10px auto;
 }
 
 /* Favorites section styling */
 .favorites {
   margin-top: 20px;
   text-align: left;
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
 .favorites h3 {
   font-size: 1.4rem;
-  color: #333;
   margin-bottom: 10px;
 }
 
 .favorites ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 .favorites li {
   padding: 8px;
   cursor: pointer;
-  color: #007bff;
+  color: var(--primary-color);
   transition: color 0.3s ease;
 }
 
 .favorites li:hover {
-  color: #0056b3;
+  color: var(--primary-hover);
   text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .city-search {
+    width: 80%;
+  }
+
+  .app-name {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
 }
